@@ -7,3 +7,4 @@ fresh shell/aliases/\*
 fresh shell/\*
 
 fresh config/gitconfig --file
+fresh https://jeroentbt@bitbucket.org/jeroentbt/dotfiles-private.git config/gitconfig --file
