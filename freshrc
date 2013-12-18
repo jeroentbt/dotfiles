@@ -9,3 +9,5 @@ fresh shell/\*
 
 fresh config/gitconfig --file
 fresh $PRIV config/gitconfig --file
+
+fresh $PRIV config/ssh-config --file="~/.ssh/config"
