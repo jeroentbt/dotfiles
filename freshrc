@@ -3,7 +3,6 @@ PRIV="https://jeroentbt@bitbucket.org/jeroentbt/dotfiles-private.git"
 
 # determine what OS/distro we're on
 source ~/.dotfiles/lib/OS.sh
-echo # BASHRC_OS
 
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc

@@ -97,3 +97,6 @@ function bashrc_determine_os(){
     readonly BASHRC_OS_DISTRO
 
 }
+
+bashrc_determine_os
+
