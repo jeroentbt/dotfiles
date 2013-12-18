@@ -18,4 +18,4 @@ fresh pengwynn/dotfiles bin/termcolors --bin # echoes colors to terminal
 ## git etc
 fresh twe4ked/dotfiles bin/gh --bin # to open current project in browser
 ## web related
-fresh mathiasbynens/dotfiles bin/httpcompression --bin
+fresh alrra/dotfiles bin/httpcompression --bin
