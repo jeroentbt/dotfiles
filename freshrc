@@ -11,3 +11,7 @@ fresh config/gitconfig --file
 fresh $PRIV config/gitconfig --file
 
 fresh $PRIV config/ssh-config --file="~/.ssh/config"
+
+# Add some fun commands:
+fresh twe4ked/dotfiles bin/gh --bin # to open current project in browser
+fresh pengwynn/dotfiles bin/termcolors --bin # echoes colors to terminal
