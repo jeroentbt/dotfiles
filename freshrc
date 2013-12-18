@@ -1,4 +1,5 @@
 fresh freshshell/fresh bin/fresh --bin
+PRIV="https://jeroentbt@bitbucket.org/jeroentbt/dotfiles-private.git"
 
 # determine what OS/distro we're on
 source ~/.dotfiles/lib/OS.sh
@@ -9,3 +10,12 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
 fresh shell/aliases/\*
 fresh shell/\*
+
+fresh config/gitconfig --file
+fresh $PRIV config/gitconfig --file
+
+fresh $PRIV config/ssh-config --file="~/.ssh/config"
+
+# Add some fun commands:
+fresh twe4ked/dotfiles bin/gh --bin # to open current project in browser
+fresh pengwynn/dotfiles bin/termcolors --bin # echoes colors to terminal
