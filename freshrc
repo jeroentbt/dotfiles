@@ -6,3 +6,4 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 fresh shell/aliases/\*
 fresh shell/\*
 
+fresh config/gitconfig --file
