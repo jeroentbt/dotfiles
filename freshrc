@@ -8,7 +8,12 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
 fresh shell/aliases/\*
-fresh shell/\*
+
+if [[ $BASHRC_OS == 'Darwin' ]]; then
+   fresh shell/completion/homebrew-completion.sh
+fi
+
+fresh shell/\*   
 
 fresh config/gitconfig --file
 fresh $PRIV config/gitconfig --file
