@@ -18,6 +18,8 @@ fresh shell/\*
 fresh config/gitconfig --file
 fresh $PRIV config/gitconfig --file
 
+fresh config/tmux/\* --file="~/.tmux.conf"
+
 fresh $PRIV config/ssh-config --file="~/.ssh/config"
 
 # Some new/extra commands

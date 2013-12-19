@@ -1,0 +1,3 @@
+# [prefix] r reloads the configuration, handy
+bind R source-file ~/.tmux.conf \; display 'Reloaded'
+
