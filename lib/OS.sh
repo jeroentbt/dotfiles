@@ -82,6 +82,9 @@ function bashrc_determine_os(){
             if [ -f /etc/UnitedLinux-release ] ; then
                 DIST="${DIST}[`cat /etc/UnitedLinux-release | tr "\n" ' ' | sed s/VERSION.*//`]"
             fi
+	    if [ -f /etc/manjaro-release ] ; then
+		DistroBasedOn="Arch"
+	    fi
             OS=`lowercase $OS`
             DistroBasedOn=`lowercase $DistroBasedOn`
             readonly DistroBasedOn
