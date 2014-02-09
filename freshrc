@@ -7,7 +7,15 @@ source ~/.dotfiles/lib/OS.sh
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bash_profile
 fresh freshshell/fresh contrib/source-build.sh --file=~/.bashrc
 
-fresh shell/aliases/\*
+#---------------------
+# Aliases
+#---------------------
+fresh shell/aliases/all/\*
+if [[ $BASHRC_OS == 'Darwin' ]]; then
+   fresh shell/aliases/osx/\*
+fi
+
+
 
 if [[ $BASHRC_OS == 'Darwin' ]]; then
    fresh shell/completion/homebrew-completion.sh
