@@ -15,12 +15,19 @@ if [[ $BASHRC_OS == 'Darwin' ]]; then
    fresh shell/aliases/osx/\*
 fi
 
-
-
+#-------------------------------
+# command completion
+#-------------------------------
 if [[ $BASHRC_OS == 'Darwin' ]]; then
    fresh shell/completion/homebrew-completion.sh
 fi
 
+#-------------------------------
+# prompt
+#-------------------------------
+if [[ $BASHRC_OS == 'linux' ]]; then
+    fresh shell/prompt/git.sh
+fi
 fresh shell/\*   
 
 fresh config/gitconfig --file
