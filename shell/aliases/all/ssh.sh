@@ -9,3 +9,4 @@ tmussh() {
 alias makaku="tmussh makaku"
 alias zalem="tmussh zalem"
 alias jeru="tmussh jeru"
+alias abattoir="tmussh abattoir"
