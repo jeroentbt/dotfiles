@@ -1,7 +1,0 @@
-# use Ctrl-A (rather than Ctrl-B)
-unbind-key C-b
-set -g prefix C-a
-
-# send C-a through to window
-bind-key a send-prefix
-

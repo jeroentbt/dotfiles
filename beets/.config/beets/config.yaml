@@ -1,0 +1,31 @@
+directory: ~/Audio/Music
+library: ~/data/beets-musiclibrary.blb
+
+import:
+    copy: yes
+    #move: yes # enabling move will override copy
+    write: yes
+    languages: en, nl, fr
+    detail: yes
+    log: ~/beets-import.log
+
+threaded: yes
+
+ui:
+    color: yes
+
+plugins: mpdupdate play missing
+
+play:
+    command: bash -c 'cat $0 | mpc add'
+    relative_to: ~/Audio
+
+paths:
+    default: $albumartist/$year - $album/$artist - $album - $track - $title
+    singleton: _Singletons/$artist/$artist $title
+    comp: _Compilations/$year - $album/$artist - $album - $track - $title
+
+missing:
+    format:  $albumartist - $album - $title
+    count: no
+    total: no
