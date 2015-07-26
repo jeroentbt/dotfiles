@@ -6,7 +6,7 @@
 
 export EDITOR='emacsclient -c -a ""'
 export ALTERNATE_EDITOR=" "
-export BROWSER='conkeror'
+export BROWSER='firefox'
 ## history
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
@@ -19,9 +19,17 @@ export GIT_PS1_SHOWDIRTYSTATE=true
     . /usr/share/git/completion/git-prompt.sh
 
 alias ls='ls --color=auto'
+alias ll='ls -l'
+alias lg='ls -al | grep -i'
+alias pg='ps aux | grep -i'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 alias pyserve='python3 -m http.server'
 alias e='emacsclient -c -a ""'
 alias et='emacsclient -t -a ""'
+alias sudoh='sudo !!'
+alias grep='grep --color=auto'
 
 function ediff() {
     if [ "X${2}" = "X" ]; then
