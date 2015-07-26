@@ -41,6 +41,13 @@ function tediff() {
 
 function gi() { curl -s http://www.gitignore.io/api/$@ ;}
 
+# Alias set up to connect to default tmux session, or create that session
+# servers set up in ~/.ssh/config also works (with no mandatory tmux)
+ssht() {
+    ssh $1 -t 'tmux attach -d -t default || tmux new-session -s default'
+}
+
+
 function set_prompt {
 
     local STATUS=$?
