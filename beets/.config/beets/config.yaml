@@ -24,6 +24,7 @@ paths:
     default: $albumartist/$year - $album/$artist - $album - $track - $title
     singleton: _Singletons/$artist/$artist $title
     comp: _Compilations/$year - $album/$artist - $album - $track - $title
+    albumtype:soundtrack_game: _Soundtracks-games/$year - $album/$artist - $album - $track - $title
 
 missing:
     format:  $albumartist - $album - $title
