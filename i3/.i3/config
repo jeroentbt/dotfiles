@@ -50,6 +50,9 @@ bindsym $mod+g exec quickswitch.py --dmenu 'dmenu -i -l 15 -p ">" -fn SourceCode
 # use quickswitch to grab windows
 bindsym $mod+SHIFT+g exec quickswitch.py --move --dmenu 'dmenu -i -l 15 -p "<" -fn SourceCodePro-20px'
 
+# networkmanager dmendu
+bindsym $mod+F5 exec nmcli_dmenu
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
