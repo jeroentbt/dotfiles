@@ -19,7 +19,12 @@ export GIT_PS1_SHOWDIRTYSTATE=true
     . /usr/share/git/completion/git-prompt.sh
 
 alias ls='ls --color=auto'
+alias l='ls -1'
 alias ll='ls -l'
+alias la='ls -al'
+alias lal='ls -hal'
+alias lat='ls -alt'
+alias latr='ls -altr'
 alias lg='ls -al | grep -i'
 alias pg='ps aux | grep -i'
 alias ..='cd ..'
