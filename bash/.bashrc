@@ -113,7 +113,7 @@ function set_prompt {
     PS1+="\n${IColor}${BOTL}${BLUE}\$ ${RESET}"
 
     # PS1="${BLUE}${TOPL}${RETURN}${WHOWHERE}${WD}${GIT}${PROMPT}"
-    PS2="${BLUE}${STRIPE}>${RESET}"
+    PS2="${BLUE}${STRIPE}>${RESET} "
 }
 
 PROMPT_COMMAND='set_prompt'
