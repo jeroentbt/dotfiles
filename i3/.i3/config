@@ -30,6 +30,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+SHIFT+Return exec urxvt
 bindsym $mod+n exec urxvtc -e ncmpcpp
 bindsym $mod+backslash exec "emacsclient -c -a ''"
+bindsym $mod+SHIFT+backslash exec "emacs --debug-init"
 bindsym $mod+m exec "emacsclient -c -a '' -e '(mu4e)'"
 bindsym $mod+i exec "emacsclient -c -a '' -e '(znc-all)'"
 
