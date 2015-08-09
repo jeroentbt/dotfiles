@@ -33,6 +33,7 @@ bindsym $mod+backslash exec "emacsclient -c -a ''"
 bindsym $mod+SHIFT+backslash exec "emacs --debug-init"
 bindsym $mod+m exec "emacsclient -c -a '' -e '(mu4e)'"
 bindsym $mod+i exec "emacsclient -c -a '' -e '(znc-all)'"
+bindsym $mod+b exec "eval ${BROWSER}"
 
 # kill focused window
 bindsym $mod+q kill
