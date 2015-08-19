@@ -25,6 +25,7 @@ paths:
     singleton: _Singletons/$artist/$artist $title
     comp: _Compilations/$year - $album/$artist - $album - $track - $title
     albumtype:soundtrack_game: _Soundtracks-games/$year - $album/$artist - $album - $track - $title
+    albumtype:luisterverhaal: _Luisterverhaal/$album/$track - $album - $title
 
 missing:
     format:  $albumartist - $album - $title
