@@ -198,7 +198,7 @@ bar {
   mode dock
   font pango:DejaVu Sans Mono, icons 11px
   status_command i3status --config ~/.i3status/min.conf
-  position top
+  position bottom
   tray_output none
   colors {
     separator #666666
@@ -217,7 +217,7 @@ bar {
   font pango:DejaVu Sans Mono, icons 11px
   status_command i3status --config ~/.i3status/full.conf
   #modifier $mod (this is the default)
-  position top
+  position bottom
   tray_output LVDS1
   colors {
     separator #666666
