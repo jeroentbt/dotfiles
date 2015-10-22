@@ -116,18 +116,15 @@ function set_prompt {
     PS2="${BLUE}${STRIPE}>${RESET} "
 }
 
-PROMPT_COMMAND='set_prompt'
-#set_prompt $?
-
 # set a dumb prompt for tramp compatibility
-#case "$TERM" in
-# "dumb")
-#         PS1="> "
-#         ;;
-# xterm*|rxvt*|eterm*|screen*)
-# PS1='[\u@\h \W]\$ '
-#         ;;
-# *)
-#         PS1="> "
-#         ;;
-#esac
+case $TERM in
+    "dumb")
+        PS1="> "
+        ;;
+    xterm*|*rxvt*|eterm*|screen*)
+        set_prompt
+        ;;
+*)
+        PS1="> "
+        ;;
+esac
