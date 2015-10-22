@@ -129,6 +129,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# move workspace to output
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Down move workspace to output down
+bindsym $mod+Ctrl+Up move workspace to output up
+bindsym $mod+Ctrl+Right move workspace to output right
+
 
 set $mode_system System:  (l) lock  (s) suspend  (h) hibernate  (O) logout  (R) reboot  (S) shutdown  |  i3:  (c) reload config  (r) restart
 mode "$mode_system" {
