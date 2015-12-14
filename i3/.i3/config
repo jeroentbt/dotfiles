@@ -256,6 +256,20 @@ bar {
 
 bindsym Print exec scrot
 
+# multimedia
+bindsym XF86AudioRaiseVolume exec "ponymix increase 5"
+bindsym Shift+XF86AudioRaiseVolume exec "ponymix increase 1"
+bindsym XF86AudioLowerVolume exec "ponymix decrease 5"
+bindsym Shift+XF86AudioLowerVolume exec "ponymix decrease 1"
+bindsym XF86AudioMute exec "ponymix toggle"
+bindsym Shift+XF86AudioMute exec "ponymix set-volume 100"
+bindsym XF86AudioMicMute exec "ponymix --source -d 1 toggle"
+
+bindsym XF86AudioNext exec "mpc next"
+bindsym XF86AudioPrev exec "mpc prev"
+bindsym XF86AudioStop exec "mpc stop"
+bindsym XF86AudioPlay exec "mpc toggle"
+
 new_window pixel 2
 # no title bar for emacs, chrome
 # for_window [class="(?i)emacs"] border pixel 0
