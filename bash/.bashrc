@@ -36,6 +36,10 @@ alias et='emacsclient -t -a ""'
 alias sudoh='sudo !!'
 alias grep='grep --color=auto'
 
+# z cd jumper
+. /usr/lib/z.sh
+
+
 function ediff() {
     if [ "X${2}" = "X" ]; then
         echo "USAGE: ediff <file1> <file2>"
