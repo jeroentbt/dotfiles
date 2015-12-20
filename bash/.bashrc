@@ -13,7 +13,13 @@ export HISTSIZE=10000
 # add history of all shells to the history
 shopt -s histappend
 ## __git_ps1
-export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+# Explicitly unset color (default anyhow). Use 1 to set it.
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_DESCRIBE_STYLE="branch"
+export GIT_PS1_SHOWUPSTREAM="auto git"
 
 [[ -f /usr/share/git/completion/git-prompt.sh ]] &&
     . /usr/share/git/completion/git-prompt.sh
