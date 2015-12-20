@@ -134,7 +134,7 @@ case $TERM in
     xterm*|*rxvt*|eterm*|screen*)
         set_prompt
         ;;
-*)
+    *)
         PS1="> "
         ;;
 esac
