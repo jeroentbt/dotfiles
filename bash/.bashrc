@@ -67,28 +67,28 @@ ssht() {
 
 function set_prompt {
 
-    local STATUS=$?
+    STATUS=$?
 
     ## Colors
-    local RESET='\[\e[0m\]'
-    local BLUE='\[\e[1;34m\]'
-    local RED='\[\e[1;31m\]'
-    local YELLOW='\[\e[1;33m\]'
+    RESET='\e[0m'
+    BLUE='\e[1;34m'
+    RED='\e[1;31m'
+    YELLOW='\e[1;33m'
     # prep var for interactive color
-    local IColor=''
+    IColor=''
 
     ## Special chars
     # Get the hex value of unicode chars by copy pasting them and do
     # echo -n [unicode] | hexdump
     # ----TODO: there must be a better way to get these unicode chars in there
-    local TOPLok=`echo -e '\342\224\214'` #square
-    local TOPLerror=`echo -e '\342\224\234'`
-    local TOPL=''
-    local STRIPE=`echo -e '\342\224\200'`
-    local BOTL=`echo -e '\342\224\224'`
+    TOPLok=`echo -e '\342\224\214'` #square
+    TOPLerror=`echo -e '\342\224\234'`
+    TOPL=''
+    STRIPE=`echo -e '\342\224\200'`
+    BOTL=`echo -e '\342\224\224'`
     # combined chars
-    local O="${BLUE}(${RESET}"
-    local C="${BLUE})"
+    O="${BLUE}(${RESET}"
+    C="${BLUE})"
 
 
     ## check exit status previous command
@@ -113,7 +113,7 @@ function set_prompt {
     PS1="${IColor}${TOPL}${STRIPE}"
     PS1+="${O}${WHOWHERE}${C}"
     PS1+="${STRIPE}${O}\w${C}"
-    PS1+=$(__git_ps1 "${STRIPE}${O}${YELLOW}%s${C}")
+    PS1+='$(__git_ps1 "${STRIPE}${O}${YELLOW}%s${C}")'
     PS1+="\n${IColor}${BOTL}${BLUE}\$ ${RESET}"
 
     # PS1="${BLUE}${TOPL}${RETURN}${WHOWHERE}${WD}${GIT}${PROMPT}"
