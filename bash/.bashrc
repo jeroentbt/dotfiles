@@ -70,41 +70,29 @@ ssht() {
     ssh $1 -t 'tmux attach -d -t default || tmux new-session -s default'
 }
 
-
 function set_prompt {
 
-    STATUS=$?
+
 
     ## Colors
     RESET='\e[0m'
     BLUE='\e[1;34m'
     RED='\e[1;31m'
     YELLOW='\e[1;33m'
-    # prep var for interactive color
-    IColor=''
 
     ## Special chars
     # Get the hex value of unicode chars by copy pasting them and do
     # echo -n [unicode] | hexdump
     # ----TODO: there must be a better way to get these unicode chars in there
-    TOPLok=`echo -e '\342\224\214'` #square
-    TOPLerror=`echo -e '\342\224\234'`
-    TOPL=''
+    TOPLokChar=`echo -e '\342\224\214'` #square
+    TOPLerrorChar=`echo -e '\342\224\234'`
     STRIPE=`echo -e '\342\224\200'`
     BOTL=`echo -e '\342\224\224'`
     # combined chars
     O="${BLUE}(${RESET}"
     C="${BLUE})"
-
-
-    ## check exit status previous command
-    if [[ $STATUS = "0" ]]; then
-        IColor=${BLUE}
-        TOPL=${TOPLok}
-    else
-        IColor=${RED}
-        TOPL=${TOPLerror}
-    fi
+    TOPLOK="${BLUE}${TOPLokChar}"
+    TOPLER="${RED}${TOPLerrorChar}"
 
     ## check username
     # FIXME: Does not work
@@ -116,11 +104,11 @@ function set_prompt {
 
 
     ## start building the prompt
-    PS1="${IColor}${TOPL}${STRIPE}"
-    PS1+="${O}${WHOWHERE}${C}"
+    PS1='$(if [[ $? -eq 0 ]];then printf "${TOPLOK}"; else printf "${TOPLER}"; fi)'
+    PS1+="${STRIPE}${O}${WHOWHERE}${C}"
     PS1+="${STRIPE}${O}\w${C}"
     PS1+='$(__git_ps1 "${STRIPE}${O}${YELLOW}%s${C}")'
-    PS1+="\n${IColor}${BOTL}${BLUE}\$ ${RESET}"
+    PS1+="\n${BOTL}${BLUE}\$ ${RESET}"
 
     # PS1="${BLUE}${TOPL}${RETURN}${WHOWHERE}${WD}${GIT}${PROMPT}"
     PS2="${BLUE}${STRIPE}>${RESET} "
